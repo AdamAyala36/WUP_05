@@ -30,6 +30,25 @@ A new  preventative aides drug (triUmpsal) is under test in clinical trials. Con
 ### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
+```{r}
+female<-filter(triUmp, gender=="F")
+```
+
+```{r}
+barchartGC(~infected + treatment,data=triUmp)
+barchartGC(~infected + treatment,data=triUmp, type="percent")
+
+```
+
+```{r}
+barchartGC(~infected + treatment,data=female)
+barchartGC(~infected + treatment,data=female, type="percent")
+
+```
+
+The visual data shows that the drug worked when it includes all that took the drug compared to all who took the placebo. But once we see the females only, we can see that the drug actually increased aids and the placebo had a lower percentage of those who got aids.
+
+
 
 ### Numerical Descriptive Results
 
